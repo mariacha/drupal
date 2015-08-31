@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y libpng12-dev libjpeg-dev libpq-dev git 
 
 WORKDIR /var/www
 
-# Beginning here doesn't work
 RUN git clone https://github.com/ckwright/geek-portland.git geekportland
 RUN cd geekportland
+# Beginning here doesn't work
 RUN bin/install
 RUN ln -s geekportland/drupal html
